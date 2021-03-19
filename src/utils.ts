@@ -1,17 +1,27 @@
 /* utils.js */
+import pkg from '../package.json';
 
-export const setCookie = (key: string, value: string) => {
+export const version = pkg.version;
+
+export const setCookie = (key: string, value: string):void =>
+{
   document.cookie = `${key}=${value};`;
 };
 
-export const getCookie = (key: string): string => {
+export const getCookie = (key: string): string =>
+{
   const items: string[] = document.cookie.split('; ');
-  for (let i = 0; i < items.length; i += 1) {
+
+  for (let i = 0; i < items.length; i += 1)
+  {
     const item: string[] = items[i].split('=');
-    if (key === item[0] && item.length === 2) {
+
+    if (key === item[0] && item.length === 2) 
+    {
       return decodeURIComponent(item[1]);
     }
   }
+
   return '';
 };
 
