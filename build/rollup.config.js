@@ -1,7 +1,7 @@
 import { babel } from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
-import { version } from './package.json';
+import { version } from '../package.json';
 
 export default {
   input: 'src/utils.ts',
