@@ -1,4 +1,8 @@
 /* utils.js */
+import pkg from '../package.json';
+
+export const version = pkg.version;
+
 export const setCookie = (key: string, value: string) =>
 {
   document.cookie = `${key}=${value};`;
@@ -12,7 +16,8 @@ export const getCookie = (key: string): string =>
   {
     const item: string[] = items[i].split('=');
 
-    if (key === item[0] && item.length === 2)     {
+    if (key === item[0] && item.length === 2) 
+    {
       return decodeURIComponent(item[1]);
     }
   }

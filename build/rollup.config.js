@@ -1,5 +1,6 @@
 import { babel } from '@rollup/plugin-babel';
 import eslint from '@rollup/plugin-eslint';
+import json from '@rollup/plugin-json';
 import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
 import { version } from '../package.json';
@@ -21,6 +22,7 @@ export default {
         }
       }
     }),
+    json(),
     babel({
       extensions   : [ '.js', '.ts' ],
       exclude      : 'node_modules/**',
