@@ -1,6 +1,6 @@
 {
     "name": "rollup_lib_templete",
-    "version": "1.0.0",
+    "version": "2.1.1",
     "description": "rollup typescript",
     "main": "rollup.config.js",
     "directories": {
@@ -29,7 +29,15 @@
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "npx rimraf /lib/ && npx tsc && npx babel lib --out-dir lib && npx rimraf /dist/ && npx rollup -c ./build/rollup.config.js"
+        "build": "npx rimraf /lib/ && npx tsc && npx babel lib --out-dir lib && npx rimraf /dist/ && npx rollup -c ./build/rollup.config.js",
+        "tag": "node ./build/version.js",
+        "x": "npm --no-git-tag-version version major",
+        "y": "npm --no-git-tag-version version minor",
+        "z": "npm --no-git-tag-version version patch",
+        "postversion": "npm run changelog && git add . && npm run tag",
+        "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s -r 0",
+        "prepublishOnly": "npm run build",
+        "postpublish": "npm run clean"
     },
     "repository": {
         "type": "git",
