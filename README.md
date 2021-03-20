@@ -56,3 +56,11 @@ npm dist-tag ls xxx  # latest: 1.0.2-0
 7.push代码
 
 https://www.ruanyifeng.com/blog/2016/01/commit_message_change_log.html
+
+（1）编写包代码(npm init等操作，具体在下面会提及)
+（2）切换registry到npm对应链接https://registry.npmjs.org/：nrm use npm
+（3）登录：npm login
+（4）发布、更新：npm publish
+
+https://github.com/jsdoc2md/jsdoc-to-markdown
+https://jestjs.io/zh-Hans/docs/getting-started

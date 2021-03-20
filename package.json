@@ -1,8 +1,9 @@
 {
-  "name": "rollup_lib_templete",
-  "version": "2.1.2",
+  "name": "flyinn",
+  "version": "1.0.0",
   "description": "rollup typescript",
-  "main": "rollup.config.js",
+  "main": "./src/index.ts",
+  "files": ["dist/*","example/*"],
   "directories": {
     "lib": "lib"
   },
@@ -30,7 +31,7 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc && npx babel lib --out-dir lib && npx rollup -c ./build/rollup.config.js",
+    "build": "npm run clean && npx tsc && npx babel lib --out-dir lib && npx rollup -c ./build/rollup.config.js",
     "clean": "rimraf ./dist/ ./lib/",
     "tag": "node ./build/version.js",
     "x": "npm --no-git-tag-version version major",

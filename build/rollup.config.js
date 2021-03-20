@@ -3,13 +3,13 @@ import eslint from '@rollup/plugin-eslint';
 import json from '@rollup/plugin-json';
 import { terser } from 'rollup-plugin-terser';
 import typescript from 'rollup-plugin-typescript2';
-import { version } from '../package.json';
+import { name, version } from '../package.json';
 
 export default {
-  input  : 'src/utils.ts',
+  input  : 'src/index.ts',
   output : {
-    name      : 'my_utils',
-    file      : `dist/@${version}/index.js`,
+    name      : name,
+    file      : `dist/${name}-${version}.js`,
     format    : 'umd',
     sourcemap : true
   },
