@@ -1,4 +1,8 @@
-# [1.0.0](https://github.com/lei40251/rollup_lib_templete/compare/v2.1.2...v1.0.0) (2021-12-29)
+# [2.0.0](https://github.com/lei40251/rollup_lib_templete/compare/v1.0.0...v2.0.0) (2021-12-30)
+
+
+
+# [1.0.0](https://github.com/lei40251/rollup_lib_templete/compare/v2.1.2...v1.0.0) (2021-12-30)
 
 
 
